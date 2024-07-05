@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+small{
+    display: none;
+}
+
+.contenedor{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: lightblue;
+    font-family: 'Arial', sans-serif;
+    
+}
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+    background-color: aliceblue;
+}
+.container .titulo{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.container form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 12px 0;
+}
+
+form .grupo{
+    margin-bottom: 15px;
+    width: calc(100%/2 - 20px);
+}
+
+form span{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.grupo input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.grupo input:focus,
+.grupo input:valid{
+    border-color: skyblue;
+}
+
+form .button{
+    width: 100%;
+    height: 40px;
+    margin: 40px 0;
+}
+
+form .button input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+    background: skyblue;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+form .button input:hover{
+    background: lightblue;
+}
+
+.was-validated small{
+    display: block;
+    color: red;
+}
+
+@media(max-width: 585px){
+    .container{
+        max-width: 100%;
+    }
+    form .grupo{
+        margin-bottom: 15px;
+        width: 100%;
+
+    }
+    .container form{
+        max-height: 400px;
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+        width: 0;
+    }
+    form .button{
+        margin: 20px 0;
+    }
+}
